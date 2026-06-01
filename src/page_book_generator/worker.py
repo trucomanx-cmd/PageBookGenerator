@@ -4,27 +4,7 @@ import shutil
 import json
 import os 
 
-def gerar_html_de_template(template_path, saida_path, textos):
-    """
-    Lê um template HTML e substitui placeholders {{CHAVE}}
-    pelos valores do dict.
-    """
-
-    # Lê template
-    with open(template_path, "r", encoding="utf-8") as f:
-        conteudo = f.read()
-
-    # Substitui placeholders
-    for chave, valor in textos.items():
-        placeholder = "{{" + chave + "}}"
-        conteudo = conteudo.replace(placeholder, valor)
-
-    # Salva arquivo final
-    with open(saida_path, "w", encoding="utf-8") as f:
-        f.write(conteudo)
-
-    print(f"Arquivo gerado: {saida_path}")
-
+from text_template_engine.renderer import render_file
 
 def pipeline(   index_data_path,
                 description_path,
@@ -73,19 +53,19 @@ def pipeline(   index_data_path,
     if os.path.exists(bibliography_path):
         shutil.copy(bibliography_path, os.path.join(output_dir,"data","bibliography.bib"))
       
-    gerar_html_de_template(
+    render_file(
         os.path.join(input_dir,f"{template_type}_head.html"),
         os.path.join(output_dir,"head.html"),
         footer_header
     )
     
-    gerar_html_de_template(
+    render_file(
         os.path.join(input_dir,"foot.html"),
         os.path.join(output_dir,"foot.html"),
         footer_header
     )
 
-    gerar_html_de_template(
+    render_file(
         os.path.join(input_dir, f"{template_type}_index_{language}.html"),
         os.path.join(output_dir,"index.html"),
         index_data

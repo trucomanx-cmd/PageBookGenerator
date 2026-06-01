@@ -43,7 +43,9 @@ classifiers = [
 license = "GPL-3.0-only WITH Classpath-Exception-2.0 OR BSD-3-Clause"
 license-files = ["LICENSE"]
 keywords = ["writing", "translate"]
-dependencies = []
+dependencies = [
+    "text_template_engine"
+]
 
 [project.urls]
 "Bug Reports" = "{__url_bugs__}"
