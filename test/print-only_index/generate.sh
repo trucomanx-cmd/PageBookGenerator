@@ -1,6 +1,9 @@
 #!/bin/bash
 
-PYTHONPATH=../../src python3 -m page_book_generator.program \
+#PYTHONPATH=../../src python3 -m page_book_generator.program
+
+#pip install page_book_generator
+page-book-generator \
   --language "en" \
   --index-data "index_data.json" \
   --description "description.txt" \
