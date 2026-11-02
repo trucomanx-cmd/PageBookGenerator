@@ -20,17 +20,22 @@ To start, use the command below:
 ```bash
 page-book-generator
 ```
-## 2. More information
 
-If you want more information go to [doc](https://github.com/trucomanx/PageBookGenerator/blob/main/doc) directory.
+## 2. Examples
 
-## 3. Buy me a coffee
+To see some examples, visit the [test](https://github.com/trucomanx-cmd/PageBookGenerator/blob/main/test) directory.
+
+## 3. More information
+
+If you want more information go to [doc](https://github.com/trucomanx-cmd/PageBookGenerator/blob/main/doc) directory.
+
+## 4. Buy me a coffee
 
 If you find this tool useful and would like to support its development, you can buy me a coffee!  
 Your donations help keep the project running and improve future updates.  
 
 [☕ Buy me a coffee](https://ko-fi.com/trucomanx) 
 
-## 4. License
+## 5. License
 
 This project is licensed under the GPL license. See the `LICENSE` file for more details.

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "page_book_generator"
-version = "0.1.6"
+version = "0.1.7"
 description = "Page Book Generator"
 readme = "README.md"
 authors = [{name = "Fernando Pujaico Rivera", email = "fernando.pujaico.rivera@gmail.com"}]
@@ -17,13 +17,15 @@ classifiers = [
 license = "GPL-3.0-only WITH Classpath-Exception-2.0 OR BSD-3-Clause"
 license-files = ["LICENSE"]
 keywords = ["writing", "translate"]
-dependencies = []
+dependencies = [
+    "text_template_engine"
+]
 
 [project.urls]
-"Bug Reports" = "https://github.com/trucomanx/PageBookGenerator/issues"
+"Bug Reports" = "https://github.com/trucomanx-cmd/PageBookGenerator/issues"
 "Funding" = "https://trucomanx.github.io/en/funding.html"
-"Documentation" = "https://github.com/trucomanx/PageBookGenerator/tree/main/doc"
-"Source" = "https://github.com/trucomanx/PageBookGenerator"
+"Documentation" = "https://github.com/trucomanx-cmd/PageBookGenerator/tree/main/doc"
+"Source" = "https://github.com/trucomanx-cmd/PageBookGenerator"
 
 [project.scripts]
 "page-book-generator" = "page_book_generator.program:main"
